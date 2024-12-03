@@ -1,0 +1,30 @@
+why python?
+shell vs python
+
+
+EC2 vm not have GUI. so we need to use shell to interact with it.
+shell is not good for complex tasks. so we use python.
+python is easy to learn and use.
+
+shell commands are useful for creating and managing EC2 instances,others are give description of the machine, start and stop the machine, etc.
+
+--->shell commands vs shell scripts
+shell commands are used to execute a single command at a time.
+shell scripts are used to execute multiple commands at a time.
+
+-- primary purpose of using shell scripting by devops enigneer is to get information about the machine, start and stop the machine, etc. 
+
+
+---->why python?
+1.ansible is written in python.(ansible is a tool used for configuration management.)
+2.perform complex tasks.example: creating a web server, creating a database server, and other data manipulation opration.
+so python is easy than shell scripting.
+
+python--> rich modules and libraries
+curl--> json parsing is difficult.
+
+
+goal of  devops engineer:-
+
+script--> api-->issues-->json-->parse-->get the required information
+ 
