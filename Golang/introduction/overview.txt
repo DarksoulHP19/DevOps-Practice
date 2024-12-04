@@ -1,4 +1,4 @@
-* overview of go lang.
+==> overview of go lang.
 * setting up go lang environment.
 * Basic GoLang syntax and types
 * introduction to Devops and its Principles
