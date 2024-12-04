@@ -157,3 +157,12 @@ function welcomeToBooleans() {
 
 a = welcomeToBooleans(); //o/p is: true
 console.log(a);
+
+///---------------------------------------------------------------------------------------------
+//-> arrow function :- it is  a way to write function in a short way.
+
+const myFunc = () => {
+    const myVar = "value";
+    return myVar;
+}
+console.log(myFunc()); //o/p is: value
