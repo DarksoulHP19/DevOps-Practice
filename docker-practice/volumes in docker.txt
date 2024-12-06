@@ -1,0 +1,5 @@
+ 
+ $ docker build -t  basicapp . 
+
+ $ docker run --name basicapp -p 3000:3000 --rm  -v E:\DevOps-Practice\docker-practice\basic-node_app:/app basic
+

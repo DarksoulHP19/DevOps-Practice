@@ -1,0 +1,46 @@
+$ docker --version  // for version checking
+
+$ docker build -t mytodoapp . // for building the image of application mytodoapp,
+                                    here mytodoapp is the name of the image
+                                    . is the path of the Dockerfile
+
+$ docker images // for checking the images
+----------------------------------------------------------------
+$ docker pull node // for pulling the image of node
+
+$ docker run -it node // for running the node container in the interactive mode
+
+/*/*/*/***//*/*/*/////*/**//////*/*//*/**/*//*/*/*/*/*/*/*/**/*/*/*/*/
+
+$ docker pull mysql:5.7 // for pulling the image of mysql version 5.7
+
+$ docker run -d -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=root mysql:5.7
+    // for running the mysql container in the background
+    // -d for running the container in the background
+    // -p for port mapping
+    // --name for giving the name to the container
+    // -e for setting the environment variable
+
+------------------------------------------------------------
+
+------> Deleting images and containers using commands
+
+$ docker image rm  basic_app // for deleting the image
+
+$ docker image rm imag -f // for deleting the image forcefully
+
+
+$ docker container rm container_name // for deleting the container
+
+$ docker container rm container_name -f // for deleting the container forcefully
+
+$ docker system prune -a // for deleting all the images and containers
+
+------------------------------------------------------------------
+---> running the container in the interactive mode
+
+$ docker run --name basicnodeapp-container-v2 -p 3000:3000 basicnodeapp:v2
+    // for running the container in the interactive mode
+    // --name for giving the name to the container
+    // -p for port mapping
+    // -it for running the container in the interactive mode
