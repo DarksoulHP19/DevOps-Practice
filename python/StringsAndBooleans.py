@@ -60,18 +60,17 @@ print(f"{txt}{age}")
 #escape character
 txt = "We are the so-called \"Vikings\" from the north." # \" is used to escape the double quote"
 print(txt)
-'''
-\'	Single Quote	
-\\	Backslash	
-\n	New Line	
-\r	Carriage Return	
-\t	Tab	
-\b	Backspace	
-\f	Form Feed	
-\ooo	Octal value	
-\xhh	Hex value
-
-'''
+# '''
+# \'	Single Quote	
+# \\	Backslash	
+# \n	New Line	
+# \r	Carriage Return	
+# \t	Tab	
+# \b	Backspace	
+# \f	Form Feed	
+# \ooo	Octal value	
+# \xhh	Hex value
+# '''
 
 
 # string methods
@@ -129,3 +128,80 @@ zfill()	Fills the string with a specified number of 0 values at the beginning
 print(10 > 9) #true
 print(10 == 9) #false
 print(10 < 9) #false
+
+def myFunction():
+  return False
+
+if myFunction():
+  print("YES!")
+else:
+  print("NO!")
+
+x=200
+print(isinstance(x,int)) #true
+
+# Boolean Operators
+num1 = 200
+num2 = 4
+
+#arithmetic oprators
+print(num1 + num2)#addition
+print(num1 - num2)#subtraction
+print(num1 * num2)#multiplication
+print(num1 / num2)#division
+print(num1 % num2)#modulus
+print(num1 ** num2)#exponential
+print(num1 // num2)#floor division
+
+#assignment operators
+x = 5
+print(x) #5
+x += 3
+print(x) #8
+x -= 3
+print(x) #5
+x *= 3
+print(x) #15
+x /= 3
+print(x) #5.0
+x %= 3
+print(x) #2.0
+x //= 3
+print(x) #0.0
+x **= 3
+print(x) #0.0
+
+x=5
+x &= 3
+print(x) #1
+x |= 3
+print(x) #3
+x ^= 3
+print(x) #0
+x >>= 3
+print(x) #0
+x <<= 3
+print(x) #0
+
+print(x:=5) #walrus operator
+
+#comparison operators
+x = 5
+y = 10
+
+print(x == y) #equal
+print(x != y) #not equal
+print(x > y) #greater than
+print(x < y) #less than
+print(x >= y) #greater than or equal to
+print(x <= y) #less than or equal to
+
+#logical operators
+x = 5 and x < 10  #both conditions are true so whole condition is true
+print(x) #true
+
+x = 5 or x < 4 #one condition is true so whole condition is true
+print(x) #true
+
+x = not(x < 10) #condition is false so not of false is true
+print(x) #true
