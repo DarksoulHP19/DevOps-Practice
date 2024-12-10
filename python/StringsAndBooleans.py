@@ -205,3 +205,26 @@ print(x) #true
 
 x = not(x < 10) #condition is false so not of false is true
 print(x) #true
+
+#memebership operators //in , not in
+x = ["apple", "banana"] 
+print("banana" in x) #true 
+print("pineapple" not in x) #true
+
+#identity operators  //is , is not
+print(x is y) #false
+print(x is not y) #true
+
+#bitwise operators
+x = 5
+y = 3
+
+print(x & y) #AND
+print(x | y) #OR
+print(x ^ y) #XOR
+print(~x) #NOT
+print(x << 2) #Zero fill left shift
+print(x >> 2) #Signed right shift
+
+
+
