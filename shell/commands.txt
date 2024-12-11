@@ -1,0 +1,220 @@
+///// commands
+
+ls - list files in current directory
+syntax: ls 
+o/p: list of files in current directory
+$ ls -l  // list files in long format
+
+cd - change directory
+syntax: cd <directory name>
+o/p: changes the directory to the specified directory
+
+pwd - print working directory
+syntax: pwd
+o/p: prints the current working directory
+
+mkdir - make directory
+syntax: mkdir <directory name>
+o/p: creates a new directory with the specified name
+
+cp - copy files
+syntax: cp <source file> <destination file/path>
+o/p: copies the source file to the destination path or file
+
+mv - move files
+syntax: mv <source file> <destination file/path>
+o/p: moves the source file to the destination path or file
+$mv --help | grep verbose // display help for mv command
+
+rm - remove files
+syntax: rm <file name>
+o/p: removes the specified file
+
+cat - view file content
+syntax: cat <file name>
+o/p: displays the content of the specified file
+
+less - view file content
+syntax: less <file name>
+o/p: displays the content of the specified file //the main difference between cat and less is that less allows you to scroll through the file
+
+grep - search for text in files
+syntax: grep <text> <file name>
+o/p: searches for the specified text in the file
+
+touch - create a new file
+syntax: touch <file name>
+o/p: creates a new file with the specified name
+
+chmod - change file permissions
+syntax: chmod <permissions> <file name>
+o/p: changes the permissions of the specified file  //permissions can be specified in octal or symbolic form
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+shell scripting:-
+
+#!/bin/bash
+
+echo "hello,world!"
+
+
+
+#single line comment
+
+<<comment
+......
+THIS IS MULTILINE COMMENT
+......
+comment
+
+#variables
+name="Harsh"
+age=28
+host=($hostname)
+
+echo "Name is $name and age is $age"
+echo "Host is $host"
+
+
+#constant variable
+
+readonly name="Harsh"
+echo "Name is $name"
+
+
+#readig input from user
+read <variable name>
+read -p "Enter your name: " name
+
+#conditional statements
+1. if else
+            if [ condition ]
+            then
+                statement
+            else
+                statement
+            fi
+2. if elif else
+            if [ condition ]
+            then
+                statement
+            elif [ condition ]
+            then
+                statement
+            else
+                statement
+            fi
+
+#switch cases 
+case $chocie in 
+    a) date;;   //option a
+    b) ls;;      //option b
+    *) echo "Invalid choice";;  //default case
+esac
+
+#oprators
+1. equal to: -eq / ==
+2. not equal to: -ne / !=
+3. greater than: -gt / >
+4. less than: -lt / <
+5. greater than or equal to: -ge / >=
+6. less than or equal to: -le / <=
+
+
+#checking file
+
+if [-d folder_name] If the folder exists
+[! -d folder_name] If folder not exists 
+
+if [-f file_name]  If the file exists
+[! -f file_name]  If file not exists
+
+#loops 
+1. for loops
+for i in 1 2 3 4 5
+do 
+    echo "number is $i"
+done
+
+//itreate values from a file
+for i in `cat file.txt`
+do
+    echo "value is $i"
+done
+
+#until loop
+i=1
+until [ $i -gt 5 ]
+do
+    echo "number is $i"
+    i=$((i+1))
+done
+
+////////--
+
+some useful concepts:-
+break - to stop the loop
+continue - to skip the current iteration and continue with the next iteration
+
+//--------------
+expression 
+
+let a++
+let a = 5*10
+echo $a
+
+//--------------
+print name the script.
+
+#!/bin/bash
+echo "The Name of this script is ${0}"
+
+sleep 5
+
+//----------------
+#functions 
+
+function_name(){
+    statement
+}
+
+#argument passing to function
+function_name(){
+    local num1=$1
+    local num2 = $2
+    local sum=$((num1+num2))
+    echo "sum of $num1 and $num2 is $sum"
+}
+
+
+#arguments in script
+
+to get no. of arguments passed to the script : $#
+to display all the arguments passed to the script : $@
+to use or display a argument : $1 $2 $3 ...
+
+
+#bash variables
+random number: $RANDOM
+user id of the current user: $UID
+
+//WHAT IS dev null in linux
+/dev/null is a special file that acts like a black hole in Linux. It is used to discard output, or to redirect output to nowhere. This file is provided and handled by the kernel, and it is not associated with any hardware device.
+
+sleep  // is used to create delay in the script
+exit status of last command: $?
+
+
+#logging in shell script
+ 
+
+
+log messages to a file
+echo "message" >> file.log
+
+
+#debugging shell script
+set -x // to enable debugging
+set +x // to disable debugging
